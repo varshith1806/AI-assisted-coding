@@ -1,0 +1,136 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMm9n77Hy23+pDRbJjKgkO/",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/varshith1806/AI-assisted-coding/blob/main/AI%20asst\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Start a Python class named Student with attributes name, roll_number, and marks. Prompt\n",
+        "GitHub Copilot to complete methods for displaying details and checking if marks are above\n",
+        "average"
+      ],
+      "metadata": {
+        "id": "ql0lMASiLyF1"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "give a python code of a class of students have a attribute (name rollno marks) check if the students marks are above avg of 46 if below 45 fali above 45 pass for n students take it input as dynamacially"
+      ],
+      "metadata": {
+        "id": "CwL7tMcaQvzP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "41ef1c0f",
+        "outputId": "566330a5-d13f-4b79-e4e8-c7e226b42b5b"
+      },
+      "source": [
+        "Snum_students = int(input(\"Enter the number of students: \"))\n",
+        "students = []\n",
+        "\n",
+        "for i in range(num_students):\n",
+        "    name = input(f\"Enter name of student {i+1}: \")\n",
+        "    roll_number = input(f\"Enter roll number of student {i+1}: \")\n",
+        "    marks = float(input(f\"Enter marks of student {i+1}: \"))\n",
+        "    student = Student(name, roll_number, marks)\n",
+        "    students.append(student)\n",
+        "\n",
+        "for student in students:\n",
+        "    student.display_details()\n",
+        "    status = student.check_pass_fail()\n",
+        "    print(f\"{student.name} has {status}\")"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the number of students: 5\n",
+            "Enter name of student 1: harshappa\n",
+            "Enter roll number of student 1: 77\n",
+            "Enter marks of student 1: 54\n",
+            "Enter name of student 2: chinna pilla\n",
+            "Enter roll number of student 2: 90\n",
+            "Enter marks of student 2: 90.5\n",
+            "Enter name of student 3: pandu\n",
+            "Enter roll number of student 3: 92\n",
+            "Enter marks of student 3: 90.04\n",
+            "Enter name of student 4: Topper no1\n",
+            "Enter roll number of student 4: 177\n",
+            "Enter marks of student 4: 77\n",
+            "Enter name of student 5: sadhvubidda\n",
+            "Enter roll number of student 5: 190\n",
+            "Enter marks of student 5: 90.004\n",
+            "Name: harshappa, Roll Number: 77, Marks: 54.0\n",
+            "harshappa has Pass\n",
+            "Name: chinna pilla, Roll Number: 90, Marks: 90.5\n",
+            "chinna pilla has Pass\n",
+            "Name: pandu, Roll Number: 92, Marks: 90.04\n",
+            "pandu has Pass\n",
+            "Name: Topper no1, Roll Number: 177, Marks: 77.0\n",
+            "Topper no1 has Pass\n",
+            "Name: sadhvubidda, Roll Number: 190, Marks: 90.004\n",
+            "sadhvubidda has Pass\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "500a8c36"
+      },
+      "source": [
+        "class Student:\n",
+        "    def __init__(self, name, roll_number, marks):\n",
+        "        self.name = name\n",
+        "        self.roll_number = roll_number\n",
+        "        self.marks = marks\n",
+        "\n",
+        "    def display_details(self):\n",
+        "        print(f\"Name: {self.name}, Roll Number: {self.roll_number}, Marks: {self.marks}\")\n",
+        "\n",
+        "    def check_pass_fail(self):\n",
+        "        if self.marks >= 45:\n",
+        "            return \"Pass\"\n",
+        "        else:\n",
+        "            return \"Fail\""
+      ],
+      "execution_count": 3,
+      "outputs": []
+    }
+  ]
+}
